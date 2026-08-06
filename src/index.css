@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-300: #f09a56;
+  --color-brand-400: #e88339;
+  --color-brand-500: #D36D1F;
+  --color-brand-600: #b55a15;
+  --color-brand-700: #91460d;
+  --color-surface-dark: #070708;
+  --color-surface-card: #0e0e11;
+  --color-surface-border: #1a1a22;
+}
+
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(135deg, #e88339 0%, #D36D1F 50%, #91460d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-gradient-premium {
+    background-image: linear-gradient(135deg, #e88339 0%, #D36D1F 100%);
+  }
+
+  .glass-card {
+    background-color: rgba(14, 14, 17, 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(211, 109, 31, 0.08);
+  }
+
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glass-card-hover:hover {
+    border-color: rgba(211, 109, 31, 0.25);
+    box-shadow: 0 12px 40px -12px rgba(211, 109, 31, 0.15);
+    transform: translateY(-4px);
+  }
+}
+
+/* Beautiful custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22222a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D36D1F;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero Animated Company Name Keyframes & Utility Styles */
+@keyframes heroGradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes heroGlowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 25px rgba(232, 131, 57, 0.4)) drop-shadow(0 0 50px rgba(211, 109, 31, 0.25));
+  }
+  50% {
+    filter: drop-shadow(0 0 45px rgba(232, 131, 57, 0.8)) drop-shadow(0 0 85px rgba(211, 109, 31, 0.5));
+  }
+}
+
+.hero-company-name {
+  background: linear-gradient(
+    110deg,
+    #ffffff 0%,
+    #f8fafc 18%,
+    #f09a56 38%,
+    #e88339 52%,
+    #ffd8b3 68%,
+    #ffffff 85%,
+    #f09a56 100%
+  );
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: heroGradientFlow 7s ease-in-out infinite, heroGlowPulse 4s ease-in-out infinite;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-block;
+}
+
+.hero-company-name:hover {
+  letter-spacing: 0.025em;
+  transform: scale(1.02);
+  filter: drop-shadow(0 0 50px rgba(232, 131, 57, 0.95)) drop-shadow(0 0 95px rgba(211, 109, 31, 0.65));
+}
