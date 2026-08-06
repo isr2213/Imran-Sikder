@@ -9,14 +9,23 @@ export default function Logo({
   className = "flex items-center", 
   textSize = "md"
 }: LogoProps) {
+  const [imgSrc, setImgSrc] = useState("/logo.png");
   const [imgError, setImgError] = useState(false);
+
+  const handleError = () => {
+    if (imgSrc === "/logo.png") {
+      setImgSrc("/favicon.png");
+    } else {
+      setImgError(true);
+    }
+  };
 
   return (
     <div className={className}>
       {!imgError ? (
         <img 
-          src="/favicon.png"
-          onError={() => setImgError(true)}
+          src={imgSrc}
+          onError={handleError}
           alt="Digital Grower Ltd. Logo"
           title="Digital Grower Ltd."
           width={textSize === "sm" ? 180 : textSize === "lg" ? 360 : 280}

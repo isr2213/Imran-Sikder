@@ -450,6 +450,26 @@ ${message || 'No additional message provided.'}
   }
 });
 
+// Catch-all 404 handler for any unmatched /api/* requests to enforce JSON responses
+app.all('/api/*', (req, res) => {
+  res.status(404).json({
+    success: false,
+    error: `API endpoint ${req.method} ${req.path} not found.`
+  });
+});
+
+// Global Express error handler for API routes
+app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
+  if (req.path.startsWith('/api/')) {
+    console.error("API Error Handler:", err);
+    return res.status(err.status || 500).json({
+      success: false,
+      error: err.message || "An internal server error occurred."
+    });
+  }
+  next(err);
+});
+
 // Vite middleware setup for development, standard static serving for production
 async function startServer() {
   if (process.env.NODE_ENV !== "production") {
@@ -471,4 +491,8 @@ async function startServer() {
   });
 }
 
-startServer();
+if (process.env.VERCEL !== '1' && process.env.NODE_ENV !== 'test') {
+  startServer();
+}
+
+export default app;

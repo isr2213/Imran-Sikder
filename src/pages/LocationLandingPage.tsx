@@ -69,7 +69,7 @@ export default function LocationLandingPage() {
           "telephone": location.napDetails.telephone,
           "email": location.napDetails.email,
           "priceRange": "$$$",
-          "image": `${origin}/og-image.png`,
+          "image": `${origin}/logo.png`,
           "address": {
             "@type": "PostalAddress",
             "streetAddress": location.napDetails.streetAddress,

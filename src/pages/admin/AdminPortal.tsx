@@ -48,9 +48,9 @@ export const AdminPortal: React.FC = () => {
   const [stats, setStats] = useState<DashboardStats | null>(null);
 
   // Login Form State
-  const [loginEmail, setLoginEmail] = useState('israt@digitalgrowltd.com');
-  const [loginPassword, setLoginPassword] = useState('EnterpriseAdmin2026!');
-  const [totpCode, setTotpCode] = useState('7951');
+  const [loginEmail, setLoginEmail] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
+  const [totpCode, setTotpCode] = useState('');
   const [loginError, setLoginError] = useState('');
   const [isLoggingIn, setIsLoggingIn] = useState(false);
 
@@ -89,10 +89,10 @@ export const AdminPortal: React.FC = () => {
         requiresTwoFactor ? totpCode : undefined
       );
       if (!res.success && !res.requiresTwoFactor) {
-        setLoginError(res.error || 'Invalid enterprise credentials. Use default admin account.');
+        setLoginError(res.error || 'Invalid enterprise credentials.');
       }
     } catch {
-      setLoginError('Login failed. Check server status.');
+      setLoginError('Login request failed. Please check server status.');
     } finally {
       setIsLoggingIn(false);
     }
@@ -155,6 +155,7 @@ export const AdminPortal: React.FC = () => {
                     <input
                       type="email"
                       required
+                      placeholder="admin@digitalgrowltd.com"
                       value={loginEmail}
                       onChange={e => setLoginEmail(e.target.value)}
                       className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-xs focus:outline-none focus:border-brand-500 transition-colors"
@@ -164,13 +165,13 @@ export const AdminPortal: React.FC = () => {
                   <div>
                     <div className="flex items-center justify-between mb-1">
                       <label className="block text-xs font-bold text-zinc-300">
-                        Password / Master JWT
+                        Password / Security Key
                       </label>
-                      <span className="text-[10px] text-brand-400">Default Demo Active</span>
                     </div>
                     <input
                       type="password"
                       required
+                      placeholder="••••••••••••"
                       value={loginPassword}
                       onChange={e => setLoginPassword(e.target.value)}
                       className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-xs focus:outline-none focus:border-brand-500 transition-colors"
@@ -183,7 +184,7 @@ export const AdminPortal: React.FC = () => {
                     <label className="block text-xs font-bold text-zinc-300">
                       Two-Factor Authentication Code
                     </label>
-                    <span className="text-[10px] text-brand-400 font-bold">2FA Active</span>
+                    <span className="text-[10px] text-brand-400 font-bold">2FA Required</span>
                   </div>
                   <input
                     type="text"
@@ -191,11 +192,11 @@ export const AdminPortal: React.FC = () => {
                     maxLength={6}
                     value={totpCode}
                     onChange={e => setTotpCode(e.target.value)}
-                    placeholder="Enter code (e.g. 7951)"
+                    placeholder="000000"
                     className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-950 border border-zinc-800 text-white text-center font-mono tracking-widest text-lg focus:outline-none focus:border-brand-500 transition-colors"
                   />
                   <p className="text-[10px] text-zinc-400 mt-1">
-                    Enter your 2FA verification code (Default set to <strong className="text-brand-400">7951</strong>).
+                    Enter the 2FA verification code from your authenticator app.
                   </p>
                 </div>
               )}
@@ -204,7 +205,7 @@ export const AdminPortal: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isLoggingIn}
-                  className="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-xl shadow-lg shadow-brand-500/20 text-xs font-bold text-white bg-brand-500 hover:bg-brand-600 focus:outline-none transition-all"
+                  className="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-xl shadow-lg shadow-brand-500/20 text-xs font-bold text-white bg-brand-500 hover:bg-brand-600 focus:outline-none transition-all disabled:opacity-50 cursor-pointer"
                 >
                   <Lock className="w-4 h-4" />
                   <span>
@@ -217,18 +218,6 @@ export const AdminPortal: React.FC = () => {
                 </button>
               </div>
             </form>
-
-            {/* Quick Demo Credentials Footer */}
-            <div className="mt-6 pt-5 border-t border-zinc-800/80">
-              <div className="text-[11px] text-zinc-400 text-center mb-2 font-bold uppercase tracking-wider">
-                SaaS Demo Credentials
-              </div>
-              <div className="p-3 rounded-xl bg-zinc-950/60 border border-zinc-800/80 text-xs text-zinc-300 space-y-1 font-mono">
-                <div>Email: <strong className="text-brand-400">israt@digitalgrowltd.com</strong></div>
-                <div>Password: <strong className="text-brand-400">EnterpriseAdmin2026!</strong></div>
-                <div>2FA Code: <strong className="text-brand-400">7951</strong></div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

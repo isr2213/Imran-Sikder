@@ -265,8 +265,8 @@ export const AdminHeader: React.FC<AdminHeaderProps> = ({ onOpenSearch, onQuickA
           {showProfileMenu && (
             <div className="absolute top-full right-0 mt-2 w-64 bg-zinc-900 border border-zinc-800 rounded-xl shadow-2xl py-2 z-50">
               <div className="px-4 py-2.5 border-b border-zinc-800">
-                <div className="text-xs font-bold text-white">{user?.name || 'Engr. MD Israt'}</div>
-                <div className="text-[11px] text-zinc-400">{user?.email || 'israt@digitalgrowltd.com'}</div>
+                <div className="text-xs font-bold text-white">{user?.name || 'Enterprise Admin'}</div>
+                <div className="text-[11px] text-zinc-400">{user?.email || 'admin@digitalgrowltd.com'}</div>
                 <div className="mt-1.5 inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
                   <ShieldCheck className="w-3 h-3" />
                   <span>2FA TOTP Verified</span>

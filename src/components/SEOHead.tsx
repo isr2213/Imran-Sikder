@@ -24,7 +24,7 @@ export default function SEOHead({
   description,
   canonicalUrl,
   keywords,
-  ogImage = "https://digitalgrowltd.com/og-image.png",
+  ogImage = "https://digitalgrowltd.com/logo.png",
   schema,
   breadcrumbSchema,
 }: SEOHeadProps) {

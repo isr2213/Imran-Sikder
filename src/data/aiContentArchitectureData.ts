@@ -612,7 +612,7 @@ export function generateEnterprise15PointSchema(
   const origin = "https://digitalgrowltd.com";
   const fullUrl = pageUrl.startsWith("http") ? pageUrl : `${origin}${pageUrl}`;
   const logoUrl = `${origin}/logo.png`;
-  const heroImageUrl = `${origin}/og-image.png`;
+  const heroImageUrl = `${origin}/logo.png`;
 
   // 1. Organization Schema
   const organizationSchema = {
