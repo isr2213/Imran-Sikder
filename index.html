@@ -1,31 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script>
-      (function() {
-        try {
-          if (typeof window !== 'undefined' && typeof window.fetch === 'function') {
-            var realFetch = window.fetch.bind(window);
-            var currentFetch = realFetch;
-            var desc = Object.getOwnPropertyDescriptor(window, 'fetch') || Object.getOwnPropertyDescriptor(Object.getPrototypeOf(window), 'fetch');
-            if (!desc || (desc.get && !desc.set)) {
-              Object.defineProperty(window, 'fetch', {
-                get: function() {
-                  return currentFetch;
-                },
-                set: function(fn) {
-                  currentFetch = typeof fn === 'function' ? fn.bind(window) : fn;
-                },
-                configurable: true,
-                enumerable: true
-              });
-            }
-          }
-        } catch (e) {
-          // ignore
-        }
-      })();
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DGL IT | ROI-Focused Digital Marketing & IT Solutions</title>

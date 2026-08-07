@@ -53,7 +53,7 @@ router.post('/auth/login', (req, res) => {
 
   if (result.user.twoFactorEnabled && totpCode) {
     // Validate 2FA code against environment variable
-    const expected2FA = String(process.env.ADMIN_2FA_CODE || '7951').trim();
+    const expected2FA = String(process.env.ADMIN_2FA_CODE || '7951').replace(/^["']|["']$/g, '').trim();
     const cleanedCode = String(totpCode).trim();
     if (cleanedCode !== expected2FA) {
       return res.status(401).json({ error: 'Invalid Two-Factor Authentication code.' });

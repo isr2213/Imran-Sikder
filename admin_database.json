@@ -7,7 +7,7 @@
       "role": "Super Admin",
       "department": "Executive Architecture",
       "status": "active",
-      "lastLogin": "2026-08-02 20:45 UTC",
+      "lastLogin": "2026-08-07 00:53 UTC",
       "twoFactorEnabled": true,
       "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200",
       "permissions": [
@@ -766,6 +766,160 @@
     }
   ],
   "auditLogs": [
+    {
+      "id": "log-1786064006820",
+      "timestamp": "2026-08-07 00:53:26 UTC",
+      "userEmail": "israt@digitalgrowltd.com",
+      "userName": "Engr. MD Israt",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Successful enterprise login (Super Admin). Remember Me: false",
+      "ipAddress": "127.0.0.1",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "log-1786063892361",
+      "timestamp": "2026-08-07 00:51:32 UTC",
+      "userEmail": "israt@digitalgrowltd.com",
+      "userName": "Engr. MD Israt",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Successful enterprise login (Super Admin). Remember Me: false",
+      "ipAddress": "127.0.0.1",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "log-1786063557053",
+      "timestamp": "2026-08-07 00:45:57 UTC",
+      "userEmail": "israt@digitalgrowltd.com",
+      "userName": "Engr. MD Israt",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Successful enterprise login (Super Admin). Remember Me: false",
+      "ipAddress": "127.0.0.1",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "log-1786063552149",
+      "timestamp": "2026-08-07 00:45:52 UTC",
+      "userEmail": "israt@digitalgrowltd.com",
+      "userName": "Engr. MD Israt",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Successful enterprise login (Super Admin). Remember Me: false",
+      "ipAddress": "127.0.0.1",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "log-1786063538406",
+      "timestamp": "2026-08-07 00:45:38 UTC",
+      "userEmail": "israt@digitalgrowltd.com",
+      "userName": "Unknown User",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Failed login attempt from IP: 127.0.0.1. Reason: Invalid authentication credentials.",
+      "ipAddress": "127.0.0.1",
+      "status": "ALERT"
+    },
+    {
+      "id": "log-1786063530936",
+      "timestamp": "2026-08-07 00:45:30 UTC",
+      "userEmail": "israt@digitalgrowltd.com",
+      "userName": "Unknown User",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Failed login attempt from IP: 127.0.0.1. Reason: Invalid authentication credentials.",
+      "ipAddress": "127.0.0.1",
+      "status": "ALERT"
+    },
+    {
+      "id": "log-1786063527823",
+      "timestamp": "2026-08-07 00:45:27 UTC",
+      "userEmail": "digitalgrowerltd@gmail.com",
+      "userName": "Unknown User",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Failed login attempt from IP: 127.0.0.1. Reason: Invalid authentication credentials.",
+      "ipAddress": "127.0.0.1",
+      "status": "ALERT"
+    },
+    {
+      "id": "log-1786063518411",
+      "timestamp": "2026-08-07 00:45:18 UTC",
+      "userEmail": "israt@digitalgrowltd.com",
+      "userName": "Unknown User",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Failed login attempt from IP: 127.0.0.1. Reason: Invalid authentication credentials.",
+      "ipAddress": "127.0.0.1",
+      "status": "ALERT"
+    },
+    {
+      "id": "log-1786063484599",
+      "timestamp": "2026-08-07 00:44:44 UTC",
+      "userEmail": "israt@digitalgrowltd.com",
+      "userName": "Unknown User",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Failed login attempt from IP: 127.0.0.1. Reason: Invalid authentication credentials.",
+      "ipAddress": "127.0.0.1",
+      "status": "ALERT"
+    },
+    {
+      "id": "log-1786063477494",
+      "timestamp": "2026-08-07 00:44:37 UTC",
+      "userEmail": "israt@digitalgrowltd.com",
+      "userName": "Unknown User",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Failed login attempt from IP: 127.0.0.1. Reason: Invalid authentication credentials.",
+      "ipAddress": "127.0.0.1",
+      "status": "ALERT"
+    },
+    {
+      "id": "log-1786063450117",
+      "timestamp": "2026-08-07 00:44:10 UTC",
+      "userEmail": "israt@digitalgrowltd.com",
+      "userName": "Unknown User",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Failed login attempt from IP: 127.0.0.1. Reason: Invalid authentication credentials.",
+      "ipAddress": "127.0.0.1",
+      "status": "ALERT"
+    },
+    {
+      "id": "log-1786063428640",
+      "timestamp": "2026-08-07 00:43:48 UTC",
+      "userEmail": "israt@digitalgrowltd.com",
+      "userName": "Unknown User",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Failed login attempt from IP: 127.0.0.1. Reason: Invalid authentication credentials.",
+      "ipAddress": "127.0.0.1",
+      "status": "ALERT"
+    },
+    {
+      "id": "log-1786063401856",
+      "timestamp": "2026-08-07 00:43:21 UTC",
+      "userEmail": "israt@digitalgrowltd.com",
+      "userName": "Unknown User",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Failed login attempt from IP: 127.0.0.1. Reason: Invalid authentication credentials.",
+      "ipAddress": "127.0.0.1",
+      "status": "ALERT"
+    },
+    {
+      "id": "log-1786063070323",
+      "timestamp": "2026-08-07 00:37:50 UTC",
+      "userEmail": "digitalgrowerltd@gmail.com",
+      "userName": "Unknown User",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Failed login attempt from IP: 127.0.0.1. Reason: Invalid authentication credentials.",
+      "ipAddress": "127.0.0.1",
+      "status": "ALERT"
+    },
     {
       "id": "log-1786061230234",
       "timestamp": "2026-08-07 00:07:10 UTC",
