@@ -1,0 +1,1759 @@
+{
+  "users": [
+    {
+      "id": "u-1",
+      "name": "Engr. MD Israt",
+      "email": "israt@digitalgrowltd.com",
+      "role": "Super Admin",
+      "department": "Executive Architecture",
+      "status": "active",
+      "lastLogin": "2026-08-02 20:45 UTC",
+      "twoFactorEnabled": true,
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200",
+      "permissions": [
+        "ALL"
+      ]
+    },
+    {
+      "id": "u-2",
+      "name": "Tahmid Rahman",
+      "email": "seo@digitalgrowltd.com",
+      "role": "SEO Manager",
+      "department": "GEO & Organic Growth",
+      "status": "active",
+      "lastLogin": "2026-08-02 18:30 UTC",
+      "twoFactorEnabled": true,
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+      "permissions": [
+        "seo.manage",
+        "cms.edit",
+        "blog.publish",
+        "analytics.view"
+      ]
+    },
+    {
+      "id": "u-3",
+      "name": "Farhana Chowdhury",
+      "email": "marketing@digitalgrowltd.com",
+      "role": "Marketing Manager",
+      "department": "Enterprise Marketing",
+      "status": "active",
+      "lastLogin": "2026-08-02 16:15 UTC",
+      "twoFactorEnabled": true,
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200",
+      "permissions": [
+        "crm.manage",
+        "cms.edit",
+        "analytics.view",
+        "media.upload"
+      ]
+    },
+    {
+      "id": "u-4",
+      "name": "Shahriar Ahmed",
+      "email": "editor@digitalgrowltd.com",
+      "role": "Editor",
+      "department": "Editorial & Content",
+      "status": "active",
+      "lastLogin": "2026-08-01 19:20 UTC",
+      "twoFactorEnabled": false,
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200",
+      "permissions": [
+        "blog.publish",
+        "cms.edit",
+        "media.upload"
+      ]
+    },
+    {
+      "id": "u-5",
+      "name": "Nafis Ahmed (DevLead)",
+      "email": "dev@digitalgrowltd.com",
+      "role": "Developer",
+      "department": "Cloud Engineering",
+      "status": "active",
+      "lastLogin": "2026-08-02 19:50 UTC",
+      "twoFactorEnabled": true,
+      "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=200",
+      "permissions": [
+        "cms.edit",
+        "seo.manage",
+        "security.audit",
+        "api.webhooks",
+        "settings.manage"
+      ]
+    }
+  ],
+  "roles": [
+    {
+      "id": "role-1",
+      "name": "Super Admin",
+      "description": "Full system ownership, security, and IP access",
+      "userCount": 1,
+      "isSystem": true,
+      "permissions": {
+        "cms": true,
+        "blog": true,
+        "portfolio": true,
+        "crm": true,
+        "seo": true,
+        "media": true,
+        "analytics": true,
+        "users": true,
+        "security": true,
+        "settings": true
+      }
+    },
+    {
+      "id": "role-2",
+      "name": "Administrator",
+      "description": "Operational oversight across all CMS, CRM & SEO modules",
+      "userCount": 0,
+      "isSystem": true,
+      "permissions": {
+        "cms": true,
+        "blog": true,
+        "portfolio": true,
+        "crm": true,
+        "seo": true,
+        "media": true,
+        "analytics": true,
+        "users": false,
+        "security": false,
+        "settings": true
+      }
+    },
+    {
+      "id": "role-3",
+      "name": "SEO Manager",
+      "description": "Schema.org JSON-LD, GEO, AI Overviews & redirects",
+      "userCount": 1,
+      "isSystem": false,
+      "permissions": {
+        "cms": true,
+        "blog": true,
+        "portfolio": false,
+        "crm": false,
+        "seo": true,
+        "media": true,
+        "analytics": true,
+        "users": false,
+        "security": false,
+        "settings": false
+      }
+    },
+    {
+      "id": "role-4",
+      "name": "Marketing Manager",
+      "description": "Lead pipelines, Google Ads analytics & PPC tracking",
+      "userCount": 1,
+      "isSystem": false,
+      "permissions": {
+        "cms": true,
+        "blog": true,
+        "portfolio": true,
+        "crm": true,
+        "seo": false,
+        "media": true,
+        "analytics": true,
+        "users": false,
+        "security": false,
+        "settings": false
+      }
+    },
+    {
+      "id": "role-5",
+      "name": "Content Writer",
+      "description": "Drafting blog articles, case studies & whitepapers",
+      "userCount": 0,
+      "isSystem": false,
+      "permissions": {
+        "cms": false,
+        "blog": true,
+        "portfolio": true,
+        "crm": false,
+        "seo": false,
+        "media": true,
+        "analytics": false,
+        "users": false,
+        "security": false,
+        "settings": false
+      }
+    },
+    {
+      "id": "role-6",
+      "name": "Editor",
+      "description": "Publishing and approving blog articles and landing pages",
+      "userCount": 1,
+      "isSystem": false,
+      "permissions": {
+        "cms": true,
+        "blog": true,
+        "portfolio": true,
+        "crm": false,
+        "seo": false,
+        "media": true,
+        "analytics": false,
+        "users": false,
+        "security": false,
+        "settings": false
+      }
+    },
+    {
+      "id": "role-7",
+      "name": "Designer",
+      "description": "Media library management, icons, SVG & UI assets",
+      "userCount": 0,
+      "isSystem": false,
+      "permissions": {
+        "cms": false,
+        "blog": false,
+        "portfolio": true,
+        "crm": false,
+        "seo": false,
+        "media": true,
+        "analytics": false,
+        "users": false,
+        "security": false,
+        "settings": false
+      }
+    },
+    {
+      "id": "role-8",
+      "name": "Developer",
+      "description": "Cloud security, REST APIs, webhooks, and sitemaps",
+      "userCount": 1,
+      "isSystem": false,
+      "permissions": {
+        "cms": true,
+        "blog": false,
+        "portfolio": false,
+        "crm": false,
+        "seo": true,
+        "media": true,
+        "analytics": true,
+        "users": false,
+        "security": true,
+        "settings": true
+      }
+    },
+    {
+      "id": "role-9",
+      "name": "Sales Executive",
+      "description": "Lead management, follow-ups, and customer profiles",
+      "userCount": 0,
+      "isSystem": false,
+      "permissions": {
+        "cms": false,
+        "blog": false,
+        "portfolio": false,
+        "crm": true,
+        "seo": false,
+        "media": false,
+        "analytics": true,
+        "users": false,
+        "security": false,
+        "settings": false
+      }
+    },
+    {
+      "id": "role-10",
+      "name": "Customer Support",
+      "description": "Managing contact form inquiries & client messaging",
+      "userCount": 0,
+      "isSystem": false,
+      "permissions": {
+        "cms": false,
+        "blog": false,
+        "portfolio": false,
+        "crm": true,
+        "seo": false,
+        "media": false,
+        "analytics": false,
+        "users": false,
+        "security": false,
+        "settings": false
+      }
+    },
+    {
+      "id": "role-11",
+      "name": "Finance",
+      "description": "Invoices, enterprise billing, and customer accounts",
+      "userCount": 0,
+      "isSystem": false,
+      "permissions": {
+        "cms": false,
+        "blog": false,
+        "portfolio": false,
+        "crm": true,
+        "seo": false,
+        "media": false,
+        "analytics": true,
+        "users": false,
+        "security": false,
+        "settings": false
+      }
+    },
+    {
+      "id": "role-12",
+      "name": "HR",
+      "description": "Employee onboarding, user profile management",
+      "userCount": 0,
+      "isSystem": false,
+      "permissions": {
+        "cms": false,
+        "blog": false,
+        "portfolio": false,
+        "crm": false,
+        "seo": false,
+        "media": false,
+        "analytics": false,
+        "users": true,
+        "security": false,
+        "settings": false
+      }
+    },
+    {
+      "id": "role-13",
+      "name": "Viewer",
+      "description": "Read-only access to dashboard and reporting analytics",
+      "userCount": 0,
+      "isSystem": false,
+      "permissions": {
+        "cms": false,
+        "blog": false,
+        "portfolio": false,
+        "crm": false,
+        "seo": false,
+        "media": false,
+        "analytics": true,
+        "users": false,
+        "security": false,
+        "settings": false
+      }
+    }
+  ],
+  "cmsPages": [
+    {
+      "id": "page-1",
+      "title": "Enterprise Homepage",
+      "slug": "/",
+      "type": "page",
+      "status": "published",
+      "metaTitle": "Digital Grow Ltd - Enterprise Software & AI SEO Agency Bangladesh",
+      "metaDescription": "#1 Enterprise Web Development & Generative Engine Optimization (GEO) Agency in Bangladesh.",
+      "lastModified": "2026-08-02",
+      "modifiedBy": "Engr. MD Israt",
+      "views": 24510
+    },
+    {
+      "id": "page-2",
+      "title": "Enterprise Web Development Service",
+      "slug": "/service/website-design-development",
+      "type": "page",
+      "status": "published",
+      "metaTitle": "Enterprise Custom Software Development Bangladesh | DGL IT",
+      "metaDescription": "Cloud-native ERPs, microservices, and React/Node.js web engineering for conglomerates.",
+      "lastModified": "2026-08-01",
+      "modifiedBy": "Nafis Ahmed",
+      "views": 12450
+    },
+    {
+      "id": "page-3",
+      "title": "Generative Engine Optimization (GEO)",
+      "slug": "/service/seo-optimization",
+      "type": "page",
+      "status": "published",
+      "metaTitle": "AI Search & GEO Optimization Bangladesh | Digital Grow Ltd",
+      "metaDescription": "Rank in Google AI Overviews, ChatGPT Search, Gemini & Perplexity with 15-point Schema.org JSON-LD.",
+      "lastModified": "2026-08-02",
+      "modifiedBy": "Tahmid Rahman",
+      "views": 18900
+    },
+    {
+      "id": "page-4",
+      "title": "E-E-A-T Trust Center & ISO 27001",
+      "slug": "/trust-center",
+      "type": "page",
+      "status": "published",
+      "metaTitle": "E-E-A-T Trust Center & Security Credentials | Digital Grow Ltd",
+      "metaDescription": "Verifiable corporate registration, NAP consistency, and ISO/SOC2 security compliance.",
+      "lastModified": "2026-07-28",
+      "modifiedBy": "Engr. MD Israt",
+      "views": 8200
+    },
+    {
+      "id": "page-5",
+      "title": "Dhaka Division HQ Hub",
+      "slug": "/locations/dhaka",
+      "type": "landing",
+      "status": "published",
+      "metaTitle": "Enterprise Software & AI SEO Agency in Banani Dhaka | DGL IT",
+      "metaDescription": "Powering Banani, Gulshan, and Motijheel corporate headquarters with custom software and GEO.",
+      "lastModified": "2026-08-02",
+      "modifiedBy": "Tahmid Rahman",
+      "views": 9840
+    },
+    {
+      "id": "page-6",
+      "title": "USA North America Client Desk",
+      "slug": "/locations/usa-new-york",
+      "type": "landing",
+      "status": "published",
+      "metaTitle": "Offshore Enterprise Software Teams for US Enterprises | DGL IT",
+      "metaDescription": "Dedicated EST-aligned engineering squads for US SaaS founders and fintech institutions.",
+      "lastModified": "2026-08-01",
+      "modifiedBy": "Farhana Chowdhury",
+      "views": 7600
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": "blog-1",
+      "title": "How Generative Engine Optimization (GEO) Dominates Google AI Overviews in 2026",
+      "slug": "how-generative-engine-optimization-geo-dominates-google-ai-overviews",
+      "excerpt": "Traditional keyword stuffing is dead. Discover how 15-point Schema.org JSON-LD and entity-first architecture get your brand cited by AI engines.",
+      "status": "published",
+      "author": "Engr. MD Israt",
+      "authorRole": "Chief Software Architect",
+      "category": "AI Search & GEO",
+      "tags": [
+        "GEO",
+        "AI Overviews",
+        "Schema.org",
+        "JSON-LD",
+        "Enterprise SEO"
+      ],
+      "featuredImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      "publishDate": "2026-07-29",
+      "metaTitle": "GEO & Google AI Overviews Guide 2026 | Digital Grow Ltd",
+      "metaDescription": "Step-by-step technical guide to ranking in Google AI Overviews and ChatGPT Search.",
+      "schemaJsonLd": "{\"@context\":\"https://schema.org\",\"@type\":\"TechArticle\",\"headline\":\"How Generative Engine Optimization (GEO) Dominates Google AI Overviews in 2026\"}",
+      "views": 4520
+    },
+    {
+      "id": "blog-2",
+      "title": "Migrating Bangladesh Conglomerates to Cloud-Native Microservices on AWS & GCP",
+      "slug": "migrating-bangladesh-conglomerates-cloud-native-microservices",
+      "excerpt": "An architectural breakdown of zero-downtime ERP migration, Kubernetes orchestration, and high-concurrency e-commerce scaling.",
+      "status": "published",
+      "author": "Nafis Ahmed (DevLead)",
+      "authorRole": "Senior DevOps & Cloud Engineer",
+      "category": "Cloud Architecture",
+      "tags": [
+        "Cloud",
+        "Kubernetes",
+        "Microservices",
+        "AWS",
+        "Enterprise ERP"
+      ],
+      "featuredImage": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+      "publishDate": "2026-07-20",
+      "metaTitle": "Cloud Native Microservices for Enterprise Bangladesh | DGL IT",
+      "metaDescription": "Architectural case study on zero-downtime ERP migration on Kubernetes.",
+      "schemaJsonLd": "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Migrating Bangladesh Conglomerates to Cloud-Native Microservices\"}",
+      "views": 3100
+    },
+    {
+      "id": "blog-3",
+      "title": "Why NAP Consistency across Google Maps & Knowledge Graph is Critical for B2B Exporters",
+      "slug": "nap-consistency-google-maps-knowledge-graph-b2b-exporters",
+      "excerpt": "How verified LocalBusiness Schema and Google Business Profile synchronization drive global procurement inquiries from USA and UK.",
+      "status": "draft",
+      "author": "Tahmid Rahman",
+      "authorRole": "SEO Manager",
+      "category": "Local SEO",
+      "tags": [
+        "NAP",
+        "LocalBusiness",
+        "Google Maps",
+        "B2B Exporters"
+      ],
+      "featuredImage": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=1200",
+      "publishDate": "2026-08-05",
+      "metaTitle": "NAP Consistency & LocalBusiness Schema Guide | Digital Grow Ltd",
+      "metaDescription": "Maximize international B2B buyer inquiries with verified Google Maps NAP data.",
+      "schemaJsonLd": "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Why NAP Consistency is Critical for B2B Exporters\"}",
+      "views": 0
+    }
+  ],
+  "portfolioItems": [
+    {
+      "id": "port-1",
+      "title": "Apex Enterprise E-Commerce & ERP Integration",
+      "slug": "apex-enterprise-ecommerce-erp",
+      "industry": "E-commerce & RMG Retail",
+      "client": "Apex Retail Group Bangladesh",
+      "status": "completed",
+      "description": "Engineered a high-concurrency Next.js 15 e-commerce storefront connected to SAP ERP with zero downtime during seasonal Eid sales spikes.",
+      "technologies": [
+        "React 19",
+        "Next.js",
+        "Node.js",
+        "Kubernetes",
+        "SAP Middleware",
+        "Redis"
+      ],
+      "results": "+310% Online Revenue & Zero Eid Downtime",
+      "featuredImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000",
+      "gallery": [
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000",
+        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000"
+      ],
+      "completionDate": "2026-04-15"
+    },
+    {
+      "id": "port-2",
+      "title": "Bayport Maritime Container Telemetry System",
+      "slug": "bayport-maritime-container-tracking",
+      "industry": "Port Shipping & Supply Chain",
+      "client": "Bayport Shipping Lines Chattogram",
+      "status": "completed",
+      "description": "Built a real-time cargo tracking dashboard with EDI integration and automated customs clearing workflow.",
+      "technologies": [
+        "TypeScript",
+        "Express.js",
+        "PostgreSQL",
+        "Docker",
+        "Google Maps API"
+      ],
+      "results": "-45% Customs Clearance Delay & Top 3 Global SEO",
+      "featuredImage": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000",
+      "gallery": [
+        "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000"
+      ],
+      "completionDate": "2026-06-01"
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "cs-1",
+      "title": "310% Organic Revenue Surge for Bangladesh E-Commerce Giant",
+      "slug": "apex-310-percent-organic-revenue-surge",
+      "clientName": "Apex Retail Group Dhaka",
+      "industry": "Retail & E-Commerce",
+      "businessChallenge": "High cart abandonment during peak traffic and zero visibility in Google AI Overviews for footwear search queries.",
+      "objectives": [
+        "Reduce server latency under 50,000 concurrent Eid shoppers",
+        "Achieve Google AI Overview citations for top 50 footwear keywords",
+        "Integrate real-time inventory sync with SAP"
+      ],
+      "solution": "Deployed a custom Next.js edge-cached storefront and injected 15-point OfferCatalog and FAQPage JSON-LD schema.",
+      "timeline": "12 Weeks (4 Architecture Sprints)",
+      "results": [
+        "310% increase in organic search revenue within 90 days",
+        "100% uptime during record-breaking Eid sale weekend",
+        "Cited in Google AI Overviews for 44 commercial footwear queries"
+      ],
+      "featuredImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+      "pdfDownloadUrl": "/assets/case-studies/dgl-apex-enterprise-case-study.pdf",
+      "featured": true
+    }
+  ],
+  "leads": [
+    {
+      "id": "lead-1",
+      "name": "Tanvir Hossain",
+      "companyName": "Meghna Textiles Ltd",
+      "designation": "Managing Director",
+      "email": "tanvir@meghnatextiles.com",
+      "phone": "+8801711234567",
+      "source": "Google AI Overview",
+      "status": "Proposal",
+      "priority": "High",
+      "owner": "Engr. MD Israt",
+      "notes": "Requested custom ERP integration for 4 textile mills in Gazipur. Needs ISO 27001 data residency compliance.",
+      "followUpDate": "2026-08-04",
+      "createdAt": "2026-08-01 14:20 UTC",
+      "spamScore": 0.02,
+      "history": [
+        {
+          "date": "2026-08-01 14:20 UTC",
+          "action": "Lead created via Website Consultation Form",
+          "user": "System"
+        },
+        {
+          "date": "2026-08-01 15:00 UTC",
+          "action": "Assigned to Engr. MD Israt",
+          "user": "System Automation"
+        },
+        {
+          "date": "2026-08-02 11:30 UTC",
+          "action": "Status moved to Proposal after Zoom discovery call",
+          "user": "Engr. MD Israt"
+        }
+      ]
+    },
+    {
+      "id": "lead-2",
+      "name": "Robert Vance",
+      "companyName": "FinCloud Analytics NYC",
+      "designation": "VP of Engineering",
+      "email": "robert.vance@fincloudnyc.io",
+      "phone": "+1 (212) 555-0189",
+      "source": "Organic SEO",
+      "status": "Qualified",
+      "priority": "High",
+      "owner": "Farhana Chowdhury",
+      "notes": "Interested in a dedicated 6-person offshore full-stack React & Node squad for their EST wealth management portal.",
+      "followUpDate": "2026-08-03",
+      "createdAt": "2026-08-02 09:10 UTC",
+      "spamScore": 0.01,
+      "history": [
+        {
+          "date": "2026-08-02 09:10 UTC",
+          "action": "Lead captured from USA North America Hub page",
+          "user": "System"
+        }
+      ]
+    },
+    {
+      "id": "lead-3",
+      "name": "Syed Al-Mansoor",
+      "companyName": "Gulf PropTech Dubai",
+      "designation": "Chief Technology Officer",
+      "email": "smansoor@gulfproptech.ae",
+      "phone": "+971 50 889 4321",
+      "source": "WhatsApp",
+      "status": "Contacted",
+      "priority": "Medium",
+      "owner": "Farhana Chowdhury",
+      "notes": "Inquired about bilingual Arabic-English real estate CRM portal with automated Dubai Land Department API integration.",
+      "followUpDate": "2026-08-05",
+      "createdAt": "2026-08-02 16:45 UTC",
+      "spamScore": 0.03,
+      "history": [
+        {
+          "date": "2026-08-02 16:45 UTC",
+          "action": "Lead created from WhatsApp Regional Desk inquiry",
+          "user": "System"
+        }
+      ]
+    }
+  ],
+  "contactSubmissions": [
+    {
+      "id": "sub-101",
+      "name": "Dr. Shahriar Chowdhury",
+      "email": "s.chowdhury@medicarebd.com",
+      "phone": "+8801819887766",
+      "company": "Medicare Diagnostic Group",
+      "serviceInterest": "Enterprise Web Development & Custom Software",
+      "message": "We want to build a centralized Patient Portal with LIS (Laboratory Information System) integration across 5 Dhaka branches.",
+      "receivedAt": "2026-08-02 18:10 UTC",
+      "status": "unread",
+      "ipAddress": "103.115.24.88",
+      "spamScore": 0.04
+    },
+    {
+      "id": "sub-102",
+      "name": "Emma Clarkson",
+      "email": "emma@thamesproperty.co.uk",
+      "phone": "+44 20 7946 0988",
+      "company": "Thames Property Syndicate UK",
+      "serviceInterest": "Search Engine Optimization & AI GEO",
+      "message": "Looking to optimize our UK-Bangladesh diaspora real estate investment platform for Google AI Overviews.",
+      "receivedAt": "2026-08-01 21:30 UTC",
+      "status": "read",
+      "ipAddress": "81.149.200.12",
+      "spamScore": 0.02
+    }
+  ],
+  "customers": [
+    {
+      "id": "cust-1",
+      "name": "Apex Retail Group Bangladesh",
+      "companyName": "Apex Footwear Ltd",
+      "email": "it.director@apexfootwear.com",
+      "phone": "+88028811234",
+      "accountManager": "Engr. MD Israt",
+      "activeProjectsCount": 2,
+      "totalInvoicedUsd": 145000,
+      "status": "Active Enterprise",
+      "communicationHistory": [
+        {
+          "date": "2026-08-01",
+          "type": "Executive Q3 Review",
+          "summary": "Confirmed 99.99% uptime during Q2 and discussed AI search expansion for Q4."
+        }
+      ],
+      "createdAt": "2025-01-15"
+    },
+    {
+      "id": "cust-2",
+      "name": "Bayport Shipping Lines Chattogram",
+      "companyName": "Bayport Maritime Ltd",
+      "email": "ops@bayportlines.com",
+      "phone": "+88031718900",
+      "accountManager": "Nafis Ahmed",
+      "activeProjectsCount": 1,
+      "totalInvoicedUsd": 68000,
+      "status": "Active Enterprise",
+      "communicationHistory": [
+        {
+          "date": "2026-07-20",
+          "type": "Shed Tracking Demo",
+          "summary": "Delivered container telemetry dashboard upgrade with automated SMS alerts."
+        }
+      ],
+      "createdAt": "2025-08-10"
+    }
+  ],
+  "seoRedirects": [
+    {
+      "id": "red-1",
+      "fromUrl": "/services/web-development",
+      "toUrl": "/service/website-design-development",
+      "type": 301,
+      "hits": 1420,
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": "red-2",
+      "fromUrl": "/seo",
+      "toUrl": "/service/seo-optimization",
+      "type": 301,
+      "hits": 890,
+      "createdAt": "2026-02-14"
+    },
+    {
+      "id": "red-3",
+      "fromUrl": "/contact-us",
+      "toUrl": "/#contact",
+      "type": 301,
+      "hits": 2310,
+      "createdAt": "2026-03-01"
+    }
+  ],
+  "mediaFiles": [
+    {
+      "id": "media-1",
+      "name": "dgl-enterprise-hero-banani.webp",
+      "folder": "/hero",
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
+      "sizeKb": 142,
+      "type": "image",
+      "format": "WEBP",
+      "isCompressed": true,
+      "uploadedAt": "2026-07-15",
+      "uploadedBy": "Engr. MD Israt",
+      "altText": "Digital Grow Ltd Banani Commercial Area HQ Software Architecture Studio"
+    },
+    {
+      "id": "media-2",
+      "name": "apex-ecommerce-dashboard-preview.webp",
+      "folder": "/portfolio",
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000",
+      "sizeKb": 189,
+      "type": "image",
+      "format": "WEBP",
+      "isCompressed": true,
+      "uploadedAt": "2026-06-20",
+      "uploadedBy": "Nafis Ahmed",
+      "altText": "Apex Retail Group Bangladesh High Load E-Commerce Dashboard"
+    },
+    {
+      "id": "media-3",
+      "name": "dgl-iso27001-compliance-brief.pdf",
+      "folder": "/documents",
+      "url": "/assets/docs/dgl-iso27001-compliance-brief.pdf",
+      "sizeKb": 840,
+      "type": "pdf",
+      "format": "PDF",
+      "isCompressed": false,
+      "uploadedAt": "2026-07-01",
+      "uploadedBy": "Engr. MD Israt",
+      "altText": "Digital Grow Ltd ISO 27001 & SOC2 Type II Enterprise Security Overview"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log-1786061230234",
+      "timestamp": "2026-08-07 00:07:10 UTC",
+      "userEmail": "invalid@test.com",
+      "userName": "Unknown User",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Failed login attempt from IP: 127.0.0.1. Reason: Invalid authentication credentials.",
+      "ipAddress": "127.0.0.1",
+      "status": "ALERT"
+    },
+    {
+      "id": "log-1",
+      "timestamp": "2026-08-02 20:45:10 UTC",
+      "userEmail": "israt@digitalgrowltd.com",
+      "userName": "Engr. MD Israt",
+      "actionType": "LOGIN",
+      "module": "Auth",
+      "details": "Super Admin login verified with 2FA TOTP.",
+      "ipAddress": "103.115.24.12",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "log-2",
+      "timestamp": "2026-08-02 19:50:04 UTC",
+      "userEmail": "dev@digitalgrowltd.com",
+      "userName": "Nafis Ahmed (DevLead)",
+      "actionType": "CMS_EDIT",
+      "module": "CMS",
+      "details": "Updated metaTitle and schema JSON-LD on /service/website-design-development.",
+      "ipAddress": "103.115.24.15",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "log-3",
+      "timestamp": "2026-08-02 18:30:22 UTC",
+      "userEmail": "seo@digitalgrowltd.com",
+      "userName": "Tahmid Rahman",
+      "actionType": "SEO_CHANGE",
+      "module": "SEO",
+      "details": "Added 301 redirect rule from /services/web-development to /service/website-design-development.",
+      "ipAddress": "103.115.24.18",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "log-4",
+      "timestamp": "2026-08-02 16:45:00 UTC",
+      "userEmail": "system@automation",
+      "userName": "System Automation",
+      "actionType": "LEAD_UPDATE",
+      "module": "CRM",
+      "details": "Captured new WhatsApp lead: Syed Al-Mansoor (Gulf PropTech Dubai). Assigned to Farhana Chowdhury.",
+      "ipAddress": "127.0.0.1",
+      "status": "SUCCESS"
+    },
+    {
+      "id": "log-5",
+      "timestamp": "2026-08-02 02:00:00 UTC",
+      "userEmail": "system@automation",
+      "userName": "Cron Scheduler",
+      "actionType": "BACKUP",
+      "module": "System",
+      "details": "Completed automatic database snapshot: backup-auto-2026-08-02.json (14.2 MB)",
+      "ipAddress": "127.0.0.1",
+      "status": "SUCCESS"
+    }
+  ],
+  "automationRules": [
+    {
+      "id": "auto-1",
+      "name": "Instant Executive Alert on High-Priority Enterprise Lead",
+      "trigger": "Lead Created with Priority = High",
+      "action": "Send instant email notification to israt@digitalgrowltd.com & Slack #enterprise-leads",
+      "enabled": true,
+      "lastRun": "2026-08-02 09:10 UTC",
+      "executionCount": 142
+    },
+    {
+      "id": "auto-2",
+      "name": "Auto-Assign USA & UK Leads to North America Desk",
+      "trigger": "Lead Source Country in [USA, UK, Canada]",
+      "action": "Assign Lead Owner = Farhana Chowdhury & tag #EST-Desk",
+      "enabled": true,
+      "lastRun": "2026-08-02 09:10 UTC",
+      "executionCount": 89
+    },
+    {
+      "id": "auto-3",
+      "name": "Nightly Database Snapshot & JSON Backup",
+      "trigger": "Daily at 02:00 AM UTC",
+      "action": "Create complete JSON backup in /backups & prune backups > 30 days",
+      "enabled": true,
+      "lastRun": "2026-08-02 02:00 UTC",
+      "executionCount": 365
+    },
+    {
+      "id": "auto-4",
+      "name": "Automatic Schema.org JSON-LD Validation & Sitemap Ping",
+      "trigger": "CMS Page or Blog Post Published/Modified",
+      "action": "Regenerate sitemap.xml & ping Google Search Console indexing API",
+      "enabled": true,
+      "lastRun": "2026-08-02 19:50 UTC",
+      "executionCount": 512
+    }
+  ],
+  "experienceCategories": [
+    {
+      "id": "cat-1",
+      "name": "Hospitals, Diagnostic Center & Doctor Chamber",
+      "group": "Industry Wise",
+      "heading": "Hospitals, Diagnostic Center & Doctor Chamber",
+      "iconName": "Stethoscope",
+      "order": 1
+    },
+    {
+      "id": "cat-2",
+      "name": "E-commerce Electronics",
+      "group": "E-commerce",
+      "heading": "E-commerce Electronics",
+      "iconName": "Smartphone",
+      "order": 2
+    },
+    {
+      "id": "cat-3",
+      "name": "E-commerce Others",
+      "group": "E-commerce",
+      "heading": "E-commerce Others",
+      "iconName": "ShoppingBag",
+      "order": 3
+    },
+    {
+      "id": "cat-4",
+      "name": "Travel Agency",
+      "group": "Services",
+      "heading": "Travel Agency",
+      "iconName": "Plane",
+      "order": 4
+    },
+    {
+      "id": "cat-5",
+      "name": "Restaurant",
+      "group": "Hospitality",
+      "heading": "Restaurant",
+      "iconName": "Utensils",
+      "order": 5
+    },
+    {
+      "id": "cat-6",
+      "name": "Import & Export",
+      "group": "Trade",
+      "heading": "Import & Export",
+      "iconName": "Ship",
+      "order": 6
+    },
+    {
+      "id": "cat-7",
+      "name": "Mobile Servicing",
+      "group": "Services",
+      "heading": "Mobile Servicing",
+      "iconName": "Wrench",
+      "order": 7
+    },
+    {
+      "id": "cat-8",
+      "name": "Real Estate",
+      "group": "Property",
+      "heading": "Real Estate & Construction",
+      "iconName": "Building2",
+      "order": 8
+    },
+    {
+      "id": "cat-9",
+      "name": "Automobile",
+      "group": "Automotive",
+      "heading": "Automobile",
+      "iconName": "Car",
+      "order": 9
+    },
+    {
+      "id": "cat-10",
+      "name": "Publications",
+      "group": "Media",
+      "heading": "Publications & Editorial",
+      "iconName": "BookOpen",
+      "order": 10
+    },
+    {
+      "id": "cat-11",
+      "name": "Clothing & Accessories",
+      "group": "Fashion",
+      "heading": "Clothing & Accessories",
+      "iconName": "Shirt",
+      "order": 11
+    },
+    {
+      "id": "cat-12",
+      "name": "Baby Product",
+      "group": "Retail",
+      "heading": "Baby Product & Nutrition",
+      "iconName": "Baby",
+      "order": 12
+    }
+  ],
+  "experienceClients": [
+    {
+      "id": "client-1",
+      "name": "Long Life Diagnostic & Consultation Center",
+      "categoryId": "cat-1",
+      "categoryName": "Hospitals, Diagnostic Center & Doctor Chamber",
+      "country": "Bangladesh",
+      "shortDescription": "Comprehensive digital growth & patient booking software solutions.",
+      "projectType": "Full Digital Growth & Software Infrastructure",
+      "serviceProvided": "SEO, Meta Ads, Local Map Optimization, Web Portal",
+      "completionDate": "2025-11",
+      "featured": true,
+      "published": true,
+      "order": 1
+    },
+    {
+      "id": "client-2",
+      "name": "Maxaid Hospital",
+      "categoryId": "cat-1",
+      "categoryName": "Hospitals, Diagnostic Center & Doctor Chamber",
+      "country": "Bangladesh",
+      "shortDescription": "Enterprise Healthcare Marketing & Patient Acquisition Infrastructure.",
+      "projectType": "Healthcare Brand Strategy & Ads",
+      "serviceProvided": "Google Ads, Meta Ads, Video Production",
+      "completionDate": "2025-09",
+      "featured": true,
+      "published": true,
+      "order": 2
+    },
+    {
+      "id": "client-3",
+      "name": "Mukti Clinic (5 Branches)",
+      "categoryId": "cat-1",
+      "categoryName": "Hospitals, Diagnostic Center & Doctor Chamber",
+      "country": "Bangladesh",
+      "shortDescription": "Multi-branch digital presence, local SEO & automated patient flow.",
+      "projectType": "Multi-Location SEO & Automation",
+      "serviceProvided": "Local SEO, Google My Business, Social Media",
+      "completionDate": "2025-08",
+      "featured": false,
+      "published": true,
+      "order": 3
+    },
+    {
+      "id": "client-4",
+      "name": "Islamiya Eye Hospital",
+      "categoryId": "cat-1",
+      "categoryName": "Hospitals, Diagnostic Center & Doctor Chamber",
+      "country": "Bangladesh",
+      "shortDescription": "Ophthalmic specialized brand strategy and patient appointment systems.",
+      "published": true,
+      "order": 4
+    },
+    {
+      "id": "client-5",
+      "name": "Bokul Homeo Pharmacy",
+      "categoryId": "cat-1",
+      "categoryName": "Hospitals, Diagnostic Center & Doctor Chamber",
+      "country": "Bangladesh",
+      "shortDescription": "Digital outreach, e-pharmacy growth & local market visibility.",
+      "published": true,
+      "order": 5
+    },
+    {
+      "id": "client-6",
+      "name": "Happy Physiotherapy Center",
+      "categoryId": "cat-1",
+      "categoryName": "Hospitals, Diagnostic Center & Doctor Chamber",
+      "country": "Bangladesh",
+      "shortDescription": "Physical rehabilitation brand development and lead generation.",
+      "published": true,
+      "order": 6
+    },
+    {
+      "id": "client-7",
+      "name": "The Tooth Corner",
+      "categoryId": "cat-1",
+      "categoryName": "Hospitals, Diagnostic Center & Doctor Chamber",
+      "country": "Bangladesh",
+      "shortDescription": "Modern dental care branding, Google Maps local SEO & patient growth.",
+      "published": true,
+      "order": 7
+    },
+    {
+      "id": "client-8",
+      "name": "Orthopedic Spine & Trauma Surgeon – Prof. Faisal Amin Ahmed",
+      "categoryId": "cat-1",
+      "categoryName": "Hospitals, Diagnostic Center & Doctor Chamber",
+      "country": "Bangladesh",
+      "shortDescription": "Senior Specialist authority branding & digital consultation portal.",
+      "published": true,
+      "order": 8
+    },
+    {
+      "id": "client-9",
+      "name": "Life & Care Diagnostic",
+      "categoryId": "cat-1",
+      "categoryName": "Hospitals, Diagnostic Center & Doctor Chamber",
+      "country": "Bangladesh",
+      "shortDescription": "Diagnostic pathology center digital presence & customer trust.",
+      "published": true,
+      "order": 9
+    },
+    {
+      "id": "client-10",
+      "name": "RM Trading International",
+      "categoryId": "cat-2",
+      "categoryName": "E-commerce Electronics",
+      "country": "Bangladesh",
+      "shortDescription": "B2B & B2C electronics import catalog, performance ads & e-commerce.",
+      "published": true,
+      "order": 10
+    },
+    {
+      "id": "client-11",
+      "name": "Alpha Gadget",
+      "categoryId": "cat-2",
+      "categoryName": "E-commerce Electronics",
+      "country": "Bangladesh",
+      "shortDescription": "Premium gadget store conversion optimization & social ad scaling.",
+      "published": true,
+      "order": 11
+    },
+    {
+      "id": "client-12",
+      "name": "Afsar Telecom",
+      "categoryId": "cat-2",
+      "categoryName": "E-commerce Electronics",
+      "country": "Bangladesh",
+      "shortDescription": "Mobile phone & accessories e-commerce growth & store traffic.",
+      "published": true,
+      "order": 12
+    },
+    {
+      "id": "client-13",
+      "name": "Friends Services",
+      "categoryId": "cat-2",
+      "categoryName": "E-commerce Electronics",
+      "country": "Bangladesh",
+      "shortDescription": "Electronics repair & retail digital marketing campaigns.",
+      "published": true,
+      "order": 13
+    },
+    {
+      "id": "client-14",
+      "name": "Abdullah Optics",
+      "categoryId": "cat-3",
+      "categoryName": "E-commerce Others",
+      "country": "Bangladesh",
+      "shortDescription": "Eyewear & optical retail digital storefront & social media growth.",
+      "published": true,
+      "order": 14
+    },
+    {
+      "id": "client-15",
+      "name": "Ordo Nest",
+      "categoryId": "cat-3",
+      "categoryName": "E-commerce Others",
+      "country": "Bangladesh",
+      "shortDescription": "Home organization & decor e-commerce brand building.",
+      "published": true,
+      "order": 15
+    },
+    {
+      "id": "client-16",
+      "name": "R & R Consultancy",
+      "categoryId": "cat-4",
+      "categoryName": "Travel Agency",
+      "country": "Bangladesh",
+      "shortDescription": "Visa processing, education & global travel agency lead generation.",
+      "published": true,
+      "order": 16
+    },
+    {
+      "id": "client-17",
+      "name": "Chapaibazar (Qatar)",
+      "categoryId": "cat-4",
+      "categoryName": "Travel Agency",
+      "country": "Qatar",
+      "shortDescription": "GCC regional air ticketing & diaspora travel services marketing.",
+      "published": true,
+      "order": 17
+    },
+    {
+      "id": "client-18",
+      "name": "Paper Duck World Buffet (UK)",
+      "categoryId": "cat-5",
+      "categoryName": "Restaurant",
+      "country": "United Kingdom",
+      "shortDescription": "London multi-cuisine world buffet digital branding & table reservations.",
+      "published": true,
+      "order": 18
+    },
+    {
+      "id": "client-19",
+      "name": "Bunheaven London (UK)",
+      "categoryId": "cat-5",
+      "categoryName": "Restaurant",
+      "country": "United Kingdom",
+      "shortDescription": "Artisanal burger joint branding, Google Local Maps & UK delivery growth.",
+      "published": true,
+      "order": 19
+    },
+    {
+      "id": "client-20",
+      "name": "Adda Kabab Ghar & Fast Food",
+      "categoryId": "cat-5",
+      "categoryName": "Restaurant",
+      "country": "Bangladesh",
+      "shortDescription": "Local food brand positioning, promotional video ads & dine-in traffic.",
+      "published": true,
+      "order": 20
+    },
+    {
+      "id": "client-21",
+      "name": "Rapid Medical",
+      "categoryId": "cat-6",
+      "categoryName": "Import & Export",
+      "country": "Bangladesh",
+      "shortDescription": "Medical equipment import, B2B hospital supply lead generation.",
+      "published": true,
+      "order": 21
+    },
+    {
+      "id": "client-22",
+      "name": "Nur Telecom",
+      "categoryId": "cat-7",
+      "categoryName": "Mobile Servicing",
+      "country": "Bangladesh",
+      "shortDescription": "Smartphone hardware repair center branding & local customer flow.",
+      "published": true,
+      "order": 22
+    },
+    {
+      "id": "client-23",
+      "name": "Applix BD",
+      "categoryId": "cat-7",
+      "categoryName": "Mobile Servicing",
+      "country": "Bangladesh",
+      "shortDescription": "Apple device repair & accessories brand authority.",
+      "published": true,
+      "order": 23
+    },
+    {
+      "id": "client-24",
+      "name": "Urbana",
+      "categoryId": "cat-8",
+      "categoryName": "Real Estate",
+      "country": "Bangladesh",
+      "shortDescription": "Luxury residential apartment branding & High-Net-Worth lead acquisition.",
+      "published": true,
+      "order": 24
+    },
+    {
+      "id": "client-25",
+      "name": "Limrs Construction & Interior",
+      "categoryId": "cat-8",
+      "categoryName": "Real Estate",
+      "country": "Bangladesh",
+      "shortDescription": "Commercial interior design & architectural construction portfolio digital marketing.",
+      "published": true,
+      "order": 25
+    },
+    {
+      "id": "client-26",
+      "name": "Auto Studio",
+      "categoryId": "cat-9",
+      "categoryName": "Automobile",
+      "country": "Bangladesh",
+      "shortDescription": "Car detailing, ceramic coating & luxury automotive workshop branding.",
+      "published": true,
+      "order": 26
+    },
+    {
+      "id": "client-27",
+      "name": "Golpokar",
+      "categoryId": "cat-10",
+      "categoryName": "Publications",
+      "country": "Bangladesh",
+      "shortDescription": "Literary publication & online bookstore digital audience expansion.",
+      "published": true,
+      "order": 27
+    },
+    {
+      "id": "client-28",
+      "name": "Henny Bear London",
+      "categoryId": "cat-11",
+      "categoryName": "Clothing & Accessories",
+      "country": "United Kingdom",
+      "shortDescription": "UK luxury tapestry handbags & fashion accessories e-commerce growth.",
+      "published": true,
+      "order": 28
+    },
+    {
+      "id": "client-29",
+      "name": "Dhong Curtain",
+      "categoryId": "cat-11",
+      "categoryName": "Clothing & Accessories",
+      "country": "Bangladesh",
+      "shortDescription": "Custom home textile & curtain showroom digital marketing.",
+      "published": true,
+      "order": 29
+    },
+    {
+      "id": "client-30",
+      "name": "Niyamah Food",
+      "categoryId": "cat-12",
+      "categoryName": "Baby Product",
+      "country": "Bangladesh",
+      "shortDescription": "Organic baby nutrition, infant food safety & e-commerce sales growth.",
+      "published": true,
+      "order": 30
+    }
+  ],
+  "showcaseCategories": [
+    {
+      "id": "scat-1",
+      "slug": "video-production",
+      "title": "Video Production",
+      "description": "High-impact brand documentaries, product commercials, social media reels, and animated explainer videos engineered for conversion.",
+      "heroBanner": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1600&q=80",
+      "iconName": "Video",
+      "order": 1
+    },
+    {
+      "id": "scat-2",
+      "slug": "campaigns",
+      "title": "Campaigns & Branding",
+      "description": "Integrated omnichannel brand launch campaigns, positioning strategies, and seasonal promotional rollouts across global markets.",
+      "heroBanner": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=80",
+      "iconName": "Megaphone",
+      "order": 2
+    },
+    {
+      "id": "scat-3",
+      "slug": "web-development",
+      "title": "Web Development",
+      "description": "Enterprise web platforms, headless React/Next.js architectures, high-converting e-commerce, and custom SaaS portals.",
+      "heroBanner": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1600&q=80",
+      "iconName": "Globe",
+      "order": 3
+    },
+    {
+      "id": "scat-4",
+      "slug": "android-app-development",
+      "title": "Android App Development",
+      "description": "Native Kotlin & Flutter mobile applications with seamless backend API integrations, real-time sync, and offline-first reliability.",
+      "heroBanner": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1600&q=80",
+      "iconName": "Smartphone",
+      "order": 4
+    },
+    {
+      "id": "scat-5",
+      "slug": "paid-ads",
+      "title": "Paid Ads & Performance",
+      "description": "Data-driven Meta Ads, Google PPC Search & Display, TikTok Ads, and retargeting funnels driving verifiable ROI.",
+      "heroBanner": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
+      "iconName": "TrendingUp",
+      "order": 5
+    },
+    {
+      "id": "scat-6",
+      "slug": "seo",
+      "title": "Search Engine Optimization (SEO)",
+      "description": "E-E-A-T Google ranking frameworks, local SEO, technical site audit fixes, and Generative Engine Optimization (GEO) for AI search.",
+      "heroBanner": "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&w=1600&q=80",
+      "iconName": "Search",
+      "order": 6
+    },
+    {
+      "id": "scat-7",
+      "slug": "business-growth-challenge",
+      "title": "Business Growth Challenge (BGC)",
+      "description": "Intensive 90-day revenue expansion bootcamps combining AI workflow automation, customer acquisition, and scale-up execution.",
+      "heroBanner": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1600&q=80",
+      "iconName": "Zap",
+      "order": 7
+    }
+  ],
+  "showcaseProjects": [
+    {
+      "id": "proj-1",
+      "slug": "maxaid-hospital-brand-film",
+      "title": "Maxaid Hospital Cinematic Brand Documentary & Patient Care Commercials",
+      "categorySlug": "video-production",
+      "clientName": "Maxaid Hospital",
+      "industry": "Healthcare",
+      "country": "Bangladesh",
+      "projectDuration": "6 Weeks",
+      "completionDate": "2025-10-15",
+      "projectUrl": "https://maxaidhospital.com",
+      "heroBanner": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1600&q=80",
+      "servicesProvided": [
+        "Scriptwriting",
+        "4K Videography",
+        "Color Grading",
+        "Voiceover (Bengali & English)",
+        "Social Media Cuts"
+      ],
+      "technologiesUsed": [
+        "DaVinci Resolve",
+        "Sony FX6 4K Cinema",
+        "DJI Ronin Gimbal",
+        "Sennheiser Wireless Audio"
+      ],
+      "projectObjectives": "Create a trustworthy, compassionate 4K brand film establishing Maxaid as the premier emergency & surgical hospital in Dhaka.",
+      "challenges": "Filming in live operating theaters and ICU environments without disrupting hospital procedures or violating patient privacy.",
+      "solutions": "Deployed a silent 2-person production crew, utilized high-sensitivity low-light lenses, and staged patient journey narratives with real doctors.",
+      "results": "Generated 1.2M+ organic video views across Facebook & YouTube with 40% increase in outpatient appointment bookings.",
+      "performanceMetrics": [
+        {
+          "label": "Total Video Views",
+          "value": "1.4M+",
+          "change": "+320%"
+        },
+        {
+          "label": "Patient Booking Inquiries",
+          "value": "4,850+",
+          "change": "+45%"
+        },
+        {
+          "label": "Brand Recall Score",
+          "value": "88%",
+          "change": "+24%"
+        }
+      ],
+      "clientFeedback": {
+        "quote": "Digital Grower Ltd delivered a masterpiece. The cinematic quality and emotional storytelling brought tears of pride to our board of directors.",
+        "author": "Dr. Alim Rahman",
+        "role": "Managing Director, Maxaid Hospital"
+      },
+      "videoGallery": [
+        {
+          "id": "vid-1",
+          "type": "youtube",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "title": "Maxaid Hospital Official 4K Brand Documentary",
+          "thumbnail": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80",
+          "isFeatured": true
+        }
+      ],
+      "imageGallery": [
+        {
+          "id": "img-1",
+          "url": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+          "alt": "Behind the scenes 4K camera setup in hospital lobby",
+          "title": "4K Production Setup",
+          "caption": "Filming state-of-the-art diagnostic equipment"
+        }
+      ],
+      "isFeatured": true,
+      "status": "published"
+    },
+    {
+      "id": "proj-2",
+      "slug": "bunheaven-london-uk-launch-campaign",
+      "title": "Bunheaven London UK Omnichannel Restaurant Launch & Delivery Takeover",
+      "categorySlug": "campaigns",
+      "clientName": "Bunheaven London (UK)",
+      "industry": "Hospitality & Restaurant",
+      "country": "United Kingdom",
+      "projectDuration": "3 Months",
+      "completionDate": "2025-11-20",
+      "projectUrl": "https://bunheaven.co.uk",
+      "heroBanner": "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1600&q=80",
+      "servicesProvided": [
+        "Brand Positioning",
+        "Influencer Marketing",
+        "Google Local Maps Ads",
+        "Deliveroo & UberEats Funnel"
+      ],
+      "technologiesUsed": [
+        "Meta Business Suite",
+        "Google Local Search Console",
+        "TikTok Ads Manager"
+      ],
+      "projectObjectives": "Establish Bunheaven as London's premier halal gourmet burger joint in East London with 500+ daily dine-in covers.",
+      "challenges": "Saturated UK burger market with fierce competition from established local chains.",
+      "solutions": "Executed a food influencer launch event, hyper-targeted 3-mile geo-fenced Meta video ads, and optimized Google Business Profile for local intent.",
+      "results": "Sold out 1,000 burgers on launch weekend; achieved #1 local ranking for 'gourmet burger East London'.",
+      "performanceMetrics": [
+        {
+          "label": "Launch Weekend Sales",
+          "value": "£18,500+",
+          "change": "+100%"
+        },
+        {
+          "label": "Google Maps Directions",
+          "value": "12,400+",
+          "change": "+450%"
+        },
+        {
+          "label": "Instagram Followers",
+          "value": "15.2K",
+          "change": "From 0"
+        }
+      ],
+      "clientFeedback": {
+        "quote": "The queue went down the street for 3 blocks on opening day. DGL's digital campaign execution in London was flawless.",
+        "author": "Tariq Mahmood",
+        "role": "Founder, Bunheaven London"
+      },
+      "isFeatured": true,
+      "status": "published"
+    },
+    {
+      "id": "proj-3",
+      "slug": "rm-trading-international-b2b-b2c-ecommerce",
+      "title": "RM Trading International Headless React E-Commerce & B2B Wholesale Portal",
+      "categorySlug": "web-development",
+      "clientName": "RM Trading International",
+      "industry": "E-commerce Electronics",
+      "country": "Bangladesh",
+      "projectDuration": "8 Weeks",
+      "completionDate": "2025-12-05",
+      "projectUrl": "https://rmtradingbd.com",
+      "heroBanner": "https://images.unsplash.com/photo-1556742049-0a670f4a45a7?auto=format&fit=crop&w=1600&q=80",
+      "servicesProvided": [
+        "UI/UX Custom Design",
+        "Headless React Web App",
+        "Express Node.js API",
+        "Payment Gateway Integration"
+      ],
+      "technologiesUsed": [
+        "React 18",
+        "TypeScript",
+        "Tailwind CSS",
+        "Express.js",
+        "bKash / Nagad / SSLCommerz"
+      ],
+      "projectObjectives": "Build a lighting-fast sub-second mobile e-commerce platform handling 50,000+ SKU electronics items.",
+      "challenges": "Slow loading speeds on traditional WooCommerce monolith causing 65% mobile cart abandonment.",
+      "solutions": "Rebuilt as a custom React Single Page Application with server-side caching, automated inventory sync, and one-click bKash checkout.",
+      "results": "Page load time reduced from 4.8s to 0.6s. Mobile conversion rate increased by 210%.",
+      "beforeAfter": {
+        "beforeUrl": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80",
+        "afterUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+        "beforeLabel": "Legacy Slow WooCommerce (4.8s)",
+        "afterLabel": "High-Speed React DGL Portal (0.6s)"
+      },
+      "performanceMetrics": [
+        {
+          "label": "Core Web Vitals Speed Score",
+          "value": "99/100",
+          "change": "+140%"
+        },
+        {
+          "label": "Mobile Conversion Rate",
+          "value": "4.8%",
+          "change": "+210%"
+        },
+        {
+          "label": "Monthly Online Revenue",
+          "value": "৳45,000,000+",
+          "change": "+85%"
+        }
+      ],
+      "isFeatured": true,
+      "status": "published"
+    },
+    {
+      "id": "proj-4",
+      "slug": "long-life-patient-care-android-app",
+      "title": "Long Life Diagnostic Mobile Patient Care & Automated Test Reports App",
+      "categorySlug": "android-app-development",
+      "clientName": "Long Life Diagnostic Center",
+      "industry": "Healthcare & Telemedicine",
+      "country": "Bangladesh",
+      "projectDuration": "10 Weeks",
+      "completionDate": "2025-11-10",
+      "heroBanner": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=80",
+      "servicesProvided": [
+        "Native Android App Development",
+        "PDF Report Generation Engine",
+        "SMS OTP Auth",
+        "Push Notifications"
+      ],
+      "technologiesUsed": [
+        "Kotlin",
+        "Android Jetpack Compose",
+        "Node.js API",
+        "Firebase Cloud Messaging"
+      ],
+      "projectObjectives": "Enable diagnostic patients to view doctor schedules, book appointments, and download lab reports directly on Android.",
+      "challenges": "Eliminating physical report pickup congestion in diagnostic waiting lobbies.",
+      "solutions": "Created automated PDF lab report delivery with SMS notification download links & encrypted patient record vault.",
+      "results": "50,000+ Play Store downloads; reduced front-desk overcrowding by 70%.",
+      "performanceMetrics": [
+        {
+          "label": "Android Downloads",
+          "value": "50,000+",
+          "change": "Top Rated"
+        },
+        {
+          "label": "Lab Reports Delivered Digitally",
+          "value": "180,000+",
+          "change": "100% Automated"
+        }
+      ],
+      "isFeatured": true,
+      "status": "published"
+    },
+    {
+      "id": "proj-5",
+      "slug": "henny-bear-london-meta-google-ads-scale",
+      "title": "Henny Bear London Luxury Tapestry Handbags Meta & Google Ads Scaling",
+      "categorySlug": "paid-ads",
+      "clientName": "Henny Bear London",
+      "industry": "Luxury Fashion & Accessories",
+      "country": "United Kingdom",
+      "projectDuration": "Ongoing",
+      "completionDate": "2025-12-28",
+      "heroBanner": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=1600&q=80",
+      "servicesProvided": [
+        "Meta CAPI Pixel Integration",
+        "Google Shopping ROAS Optimization",
+        "Dynamic Product Ads",
+        "A/B Creative Testing"
+      ],
+      "technologiesUsed": [
+        "Meta Ads Manager",
+        "Google Merchant Center",
+        "Triple Whale Analytics"
+      ],
+      "projectObjectives": "Scale monthly UK e-commerce ad spend while maintaining a minimum 4.5x Return on Ad Spend (ROAS).",
+      "challenges": "High UK customer acquisition costs and rising CPMs during Q4 holiday shopping season.",
+      "solutions": "Implemented first-party server-side Conversions API tracking and dynamic user-generated video ad variations.",
+      "results": "Achieved 5.2x average ROAS over 6 months with over £250,000 in tracked ad revenue.",
+      "performanceMetrics": [
+        {
+          "label": "Average ROAS",
+          "value": "5.2x",
+          "change": "+180%"
+        },
+        {
+          "label": "Cost Per Acquisition (CPA)",
+          "value": "£12.40",
+          "change": "-34%"
+        },
+        {
+          "label": "E-commerce Revenue",
+          "value": "£250,000+",
+          "change": "+240%"
+        }
+      ],
+      "isFeatured": true,
+      "status": "published"
+    },
+    {
+      "id": "proj-6",
+      "slug": "urbana-real-estate-seo-geo-dominance",
+      "title": "Urbana Luxury Real Estate Google #1 SEO & AI Generative Engine Optimization",
+      "categorySlug": "seo",
+      "clientName": "Urbana",
+      "industry": "Real Estate & Luxury Housing",
+      "country": "Bangladesh",
+      "projectDuration": "6 Months",
+      "completionDate": "2025-12-01",
+      "heroBanner": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+      "servicesProvided": [
+        "Technical SEO Audit",
+        "High-Authority Link Building",
+        "E-E-A-T Schema Integration",
+        "AI Search GEO Ranking"
+      ],
+      "technologiesUsed": [
+        "Ahrefs",
+        "Google Search Console",
+        "Screaming Frog",
+        "Schema.org JSON-LD"
+      ],
+      "projectObjectives": "Rank #1 on Google for high-intent keywords like 'luxury apartments Gulshan' and 'duplex flat for sale Dhaka'.",
+      "challenges": "Competing against massive legacy real estate directories with 10+ year domain authorities.",
+      "solutions": "Built deep programmatic location neighborhood landing pages, schema structured data, and authoritative PR backlinks.",
+      "results": "Captured 12 #1 keyword rankings on Google First Page; organic High-Net-Worth leads grew by 380%.",
+      "performanceMetrics": [
+        {
+          "label": "Google Page #1 Keywords",
+          "value": "42 Keywords",
+          "change": "+420%"
+        },
+        {
+          "label": "Organic HNW Leads / Mo",
+          "value": "350+ Leads",
+          "change": "+380%"
+        }
+      ],
+      "isFeatured": true,
+      "status": "published"
+    },
+    {
+      "id": "proj-7",
+      "slug": "rapid-medical-90-day-bgc-revenue-scale",
+      "title": "Rapid Medical B2B Equipment 90-Day Business Growth Challenge (BGC)",
+      "categorySlug": "business-growth-challenge",
+      "clientName": "Rapid Medical",
+      "industry": "Medical Equipment Import & B2B",
+      "country": "Bangladesh",
+      "projectDuration": "90 Days",
+      "completionDate": "2025-11-30",
+      "heroBanner": "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1600&q=80",
+      "servicesProvided": [
+        "Sales Pipeline Automation",
+        "B2B Hospital Outreach Funnel",
+        "CRM Pipeline Setup",
+        "Growth Executive Mentorship"
+      ],
+      "technologiesUsed": [
+        "HubSpot CRM",
+        "WhatsApp Business API",
+        "LinkedIn Sales Navigator"
+      ],
+      "projectObjectives": "Double B2B hospital sales contracts in 90 days by transforming offline phone sales into an automated digital pipeline.",
+      "challenges": "Long 6-month decision cycles for hospital ICU equipment procurement.",
+      "solutions": "Deployed 90-day BGC blueprint: automated WhatsApp quotation bots, direct hospital director targeted campaigns, and automated follow-up sequences.",
+      "results": "Closed ৳120 Million in new diagnostic & hospital equipment contracts within 90 days.",
+      "performanceMetrics": [
+        {
+          "label": "90-Day Closed Sales Value",
+          "value": "৳120 Million+",
+          "change": "+210%"
+        },
+        {
+          "label": "B2B Lead Response Time",
+          "value": "3 Minutes",
+          "change": "From 24 Hours"
+        }
+      ],
+      "isFeatured": true,
+      "status": "published"
+    }
+  ],
+  "experienceSettings": {
+    "defaultLandingPage": "clients",
+    "showProjectShowcaseOnLanding": false,
+    "showCategoryTabs": true,
+    "hiddenSubmenus": [],
+    "categoryOrders": {},
+    "showcaseSectionTitle": "Enterprise Project Showcase",
+    "clientsSectionTitle": "Our Honorable Clients"
+  },
+  "settings": {
+    "companyName": "Digital Grow Ltd",
+    "legalName": "Digital Grow Ltd (DGL IT)",
+    "tagline": "Bangladesh’s Premier Enterprise Website Development & AI SEO Agency",
+    "logoUrl": "/logo.png",
+    "faviconUrl": "/favicon.ico",
+    "primaryEmail": "info@digitalgrowltd.com",
+    "phoneTelephone": "+8801880900590",
+    "whatsappNumber": "+8801989373683",
+    "addressDhaka": "Suite 4B, Rahman Plaza, Banani Commercial Area, Dhaka 1213, Bangladesh",
+    "smtpHost": "smtp.gmail.com",
+    "smtpPort": 587,
+    "smtpUser": "digitalgrowerltd@gmail.com",
+    "smtpSecure": true,
+    "geminiApiKeyMasked": "AIzaSy*******************************89Qk",
+    "googleAnalyticsId": "G-DGLIT2026BD",
+    "searchConsoleProperty": "sc-domain:digitalgrowltd.com",
+    "timezone": "Asia/Dhaka (GMT+6)",
+    "defaultLanguage": "en-US",
+    "twoFactorRequiredForAdmins": true,
+    "cspEnabled": true,
+    "activeBranch": "Dhaka HQ"
+  },
+  "backups": [
+    {
+      "id": "bk-1",
+      "timestamp": "2026-08-02 02:00:00 UTC",
+      "sizeMb": 14.2,
+      "type": "AUTO",
+      "description": "Nightly automated production database snapshot"
+    },
+    {
+      "id": "bk-2",
+      "timestamp": "2026-08-01 02:00:00 UTC",
+      "sizeMb": 14.1,
+      "type": "AUTO",
+      "description": "Nightly automated production database snapshot"
+    },
+    {
+      "id": "bk-3",
+      "timestamp": "2026-07-31 18:30:00 UTC",
+      "sizeMb": 13.9,
+      "type": "MANUAL",
+      "description": "Pre-deployment check before Q3 SEO schema upgrade"
+    }
+  ]
+}
